@@ -1,0 +1,76 @@
+print("Welcome to Mayank's simple chatbot program :)")
+print("This is a quiz asking chatbot program :)")
+
+name = input("What is your name? ")
+print(f"Hello, {name}, nice to meet you!")
+
+ask = input(f"{name}, do you want to play a quiz with me? (yes/no): ").strip().lower()
+
+if ask == "yes":
+    print("Ok, let's start :)")
+
+    # Question 1
+    ask2 = input("1. What is the capital of JAPAN? ").strip().lower()
+    if ask2 == "tokyo":
+        print("Yes, correct! Tokyo is the capital of Japan.")
+    else:
+        print("Wrong answer. The correct answer is Tokyo.")
+
+    # Question 2
+    print("Let's move on to the next question.")
+    ask3 = input("2. What is the national sport of India? ").strip().lower()
+    if ask3 == "hockey":
+        print("Yes, correct! Hockey is the national sport of India.")
+    else:
+        print("No, that's incorrect. The correct answer is hockey.")
+
+    # Question 3
+    print("Now let's move on to the harder section.")
+    try:
+        ask4 = int(input("3. A bat and a ball cost ?110 in total. The bat costs ?100 more than the ball. How much does the ball cost? "))
+        if ask4 == 5:
+            print("Yes, the answer is correct!\n"
+                  "Here's a step-by-step explanation:\n"
+                  "Let the cost of the ball be X.\n"
+                  "Then the bat costs X + 100.\n"
+                  "So, X + (X + 100) = 110\n"
+                  "2X + 100 = 110\n"
+                  "2X = 10\n"
+                  "X = 5")
+        else:
+            print("No, the answer is wrong. The correct answer is 5.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+
+    # Question 4
+    try:
+        ask5 = int(input("4. If you multiply this number by any other number, the answer will always be the same. What number is it?  plz give the answer in numbers:"))
+        if ask5 == 0:
+            print("Yes, 0 is the correct answer!")
+        else:
+            print("No, this is the wrong answer. The correct answer is 0.")
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+
+    # Question 5
+    ask6 = input("5. What gets wetter as it dries?").strip().lower()
+    if "towel" in ask6:
+        print("Correct! A towel gets wetter as it dries.")
+    else:
+        print("Wrong. The correct answer is 'towel'.")
+
+    # Question 6
+    ask7 = input("6. What has to be broken before you can use it? ").strip().lower()
+    if "egg" in ask7:
+        print("Correct. It's an egg.")
+    else:
+        print("Wrong. The correct answer is 'egg'.")
+
+    print(f"\nThanks for playing, {name}! Hope you enjoyed the quiz.")
+
+else:
+    print(f"Okay, no worries! Bye and have a great day, {name}!")
+
+
+
+
